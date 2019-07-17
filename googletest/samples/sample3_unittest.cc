@@ -147,3 +147,9 @@ TEST_F(QueueTestSmpl3, Map) {
   MapTester(&q2_);
 }
 }  // namespace
+
+int main(int argc, char *argv[]) {
+  testing::InitGoogleTest();
+  auto tmp = RUN_ALL_TESTS();
+  return tmp;
+}

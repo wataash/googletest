@@ -149,3 +149,9 @@ TEST(IsPrimeTest, Positive) {
 // Did you notice that we didn't register the tests?  The
 // RUN_ALL_TESTS() macro magically knows about all the tests we
 // defined.  Isn't this convenient?
+
+int main(int argc, char *argv[]) {
+  testing::InitGoogleTest();
+  auto tmp = RUN_ALL_TESTS();
+  return tmp;
+}

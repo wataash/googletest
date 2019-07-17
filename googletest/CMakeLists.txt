@@ -327,3 +327,51 @@ $env:Path = \"$project_bin;$env:Path\"
   py_test(gtest_xml_output_unittest --no_stacktrace_support)
   py_test(googletest-json-output-unittest --no_stacktrace_support)
 endif()
+
+# ------------------------------------------------------------------------------
+# https://scrapbox.io/wataash/googletest
+
+# TODO: remove me
+# add_executable(sample1 samples/sample1.cc samples/sample1.h samples/sample1_unittest.cc)
+add_executable(sample1 samples/sample1.cc samples/sample1_unittest.cc)
+target_include_directories(sample1 PRIVATE ./include)
+target_link_libraries(sample1 gtest)
+
+#add_executable(sample2 samples/sample2.cc samples/sample2.h samples/sample2_unittest.cc)
+add_executable(sample2 samples/sample2.cc samples/sample2_unittest.cc)
+target_include_directories(sample2 PRIVATE ./include)
+target_link_libraries(sample2 gtest)
+
+#add_executable(sample3 samples/sample3-inl.h samples/sample3_unittest.cc)
+add_executable(sample3 samples/sample3_unittest.cc)
+target_include_directories(sample3 PRIVATE ./include)
+target_link_libraries(sample3 gtest)
+
+#add_executable(sample4 samples/sample4.cc samples/sample4.h samples/sample4_unittest.cc)
+add_executable(sample4 samples/sample4.cc samples/sample4_unittest.cc)
+target_include_directories(sample4 PRIVATE ./include)
+target_link_libraries(sample4 gtest)
+
+add_executable(sample5 samples/sample1.cc samples/sample5_unittest.cc)
+target_include_directories(sample5 PRIVATE ./include)
+target_link_libraries(sample5 gtest)
+
+add_executable(sample6 samples/sample6_unittest.cc)
+target_include_directories(sample6 PRIVATE ./include)
+target_link_libraries(sample6 gtest)
+
+add_executable(sample7 samples/sample7_unittest.cc)
+target_include_directories(sample7 PRIVATE ./include)
+target_link_libraries(sample7 gtest)
+
+add_executable(sample8 samples/sample8_unittest.cc)
+target_include_directories(sample8 PRIVATE ./include)
+target_link_libraries(sample8 gtest)
+
+add_executable(sample9 samples/sample9_unittest.cc)
+target_include_directories(sample9 PRIVATE ./include)
+target_link_libraries(sample9 gtest)
+
+add_executable(sample10 samples/sample10_unittest.cc)
+target_include_directories(sample10 PRIVATE ./include)
+target_link_libraries(sample10 PRIVATE gtest)

@@ -222,3 +222,9 @@ INSTANTIATE_TYPED_TEST_SUITE_P(OnTheFlyAndPreCalculated,    // Instance name
 
 #endif  // GTEST_HAS_TYPED_TEST_P
 }  // namespace
+
+int main(int argc, char *argv[]) {
+  testing::InitGoogleTest();
+  auto tmp = RUN_ALL_TESTS();
+  return tmp;
+}

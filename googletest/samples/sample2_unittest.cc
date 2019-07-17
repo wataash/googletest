@@ -105,3 +105,9 @@ TEST(MyString, Set) {
   EXPECT_STREQ(nullptr, s.c_string());
 }
 }  // namespace
+
+int main(int argc, char *argv[]) {
+  testing::InitGoogleTest();
+  auto tmp = RUN_ALL_TESTS();
+  return tmp;
+}

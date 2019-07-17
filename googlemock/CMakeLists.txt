@@ -230,3 +230,10 @@ $env:Path = \"$project_bin;$env:Path\"
   cxx_executable(gmock_output_test_ test gmock)
   py_test(gmock_output_test)
 endif()
+
+# ------------------------------------------------------------------------------
+# TODO
+
+add_executable(mock-tes mock_tes.cc)
+target_include_directories(mock-tes PRIVATE ./include)
+target_link_libraries(mock-tes PRIVATE gmock)

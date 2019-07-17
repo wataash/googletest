@@ -152,3 +152,9 @@ INSTANTIATE_TEST_SUITE_P(MeaningfulTestParameters, PrimeTableTest,
                          Combine(Bool(), Values(1, 10)));
 
 }  // namespace
+
+int main(int argc, char *argv[]) {
+  testing::InitGoogleTest();
+  auto tmp = RUN_ALL_TESTS();
+  return tmp;
+}

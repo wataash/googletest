@@ -194,3 +194,9 @@ TEST_F(QueueTest, Dequeue) {
 // QueueTest.  Google Test imposes no limit on how deep the hierarchy
 // can be.  In practice, however, you probably don't want it to be too
 // deep as to be confusing.
+
+int main(int argc, char *argv[]) {
+  testing::InitGoogleTest();
+  auto tmp = RUN_ALL_TESTS();
+  return tmp;
+}
